@@ -1,13 +1,12 @@
+// app/(tabs)/send.tsx
 import { StyleSheet, Text, View } from "react-native";
-
-export default function FeedScreen() {
+export default function SendScreen() {
   return (
     <View style={s.container}>
-      <Text style={s.text}>Feed</Text>
+      <Text style={s.text}>Send</Text>
     </View>
   );
 }
-
 const s = StyleSheet.create({
   container: {
     flex: 1,
