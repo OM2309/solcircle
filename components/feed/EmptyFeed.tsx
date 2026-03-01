@@ -1,12 +1,18 @@
 // components/feed/EmptyFeed.tsx
 import { StyleSheet, Text, View } from "react-native";
 
-export default function EmptyFeed() {
+type Props = { loading?: boolean };
+
+export default function EmptyFeed({ loading }: Props) {
   return (
     <View style={styles.container}>
       <Text style={styles.emoji}>⚡</Text>
-      <Text style={styles.title}>No transactions yet</Text>
-      <Text style={styles.sub}>Send SOL to someone to get started</Text>
+      <Text style={styles.title}>
+        {loading ? "Loading..." : "No transactions yet"}
+      </Text>
+      <Text style={styles.sub}>
+        {loading ? "" : "Send SOL to someone to get started"}
+      </Text>
     </View>
   );
 }

@@ -1,14 +1,13 @@
 // components/feed/FeedHeader.tsx
 import { StyleSheet, Text, View } from "react-native";
+type Props = { balance: string };
 
-export default function FeedHeader() {
+export default function FeedHeader({ balance }: Props) {
   return (
     <View style={styles.container}>
       <Text style={styles.greeting}>SolCircle</Text>
-      <View style={styles.balanceWrapper}>
-        <Text style={styles.balanceLabel}>Total Balance</Text>
-        <Text style={styles.balance}>$0.00</Text>
-      </View>
+      <Text style={styles.balanceLabel}>Balance</Text>
+      <Text style={styles.balance}>{balance} SOL</Text>
     </View>
   );
 }
